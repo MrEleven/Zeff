@@ -1,3 +1,4 @@
+```cpp
 /*server.c*/
 #include <stdio.h>
 #include <stdlib.h>
@@ -255,5 +256,7 @@ _retry:
     close(sockfd);
     return 0;
 }
+
+```
 
 PS：发现facebook上的中国人一般都富二代。
