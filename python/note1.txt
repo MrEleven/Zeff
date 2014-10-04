@@ -1,0 +1,98 @@
+在迭代的时候改变被迭代的对象所引发的问题
+
+>>> class A(object):
+...     name = ''
+... 
+>>> a = A()
+>>> b = A()
+>>> c = A()
+>>> a.name = 'a'
+>>> b.name = 'b'
+>>> c.name = 'c'
+>>> d.name = 'd'
+>>> l = [a, b, c, d]
+>>> for i in l:
+...     if i == b:
+...         l.remove(i)
+...         continue
+...     i.name = '123'
+...
+>>> for i in l:
+...     print i.name
+... 
+123
+c
+123
+
+解决方法
+
+In [8]: a = [1,2,3,4,5,6]
+
+In [9]: for i in a:
+   ...:     if i == 3:
+   ...:         a.remove(i)
+   ...:     print i
+   ...:     
+1
+2
+3
+5
+6
+
+In [10]: a = [1,2,3,4,5,6]
+
+In [11]: for i in a[::-1]:
+   ....:     if i == 3:
+   ....:         a.remove(i)
+   ....:     print i
+   ....:     
+6
+5
+4
+3
+2
+1
+
+
+
+
+
+
+
+>>> class A(object):
+...     def __init__(self):
+...         print '>>>A'
+...         print '<<<A'
+... 
+>>> class B(A):
+...     def __init__(self):
+...         print '>>>B'
+...         super(B, self).__init__()
+...         print '<<<B'
+... 
+>>> class C(A):
+...     def __init__(self):
+...         print '>>>C'
+...         super(C, self).__init__()
+...         print '<<<C'
+... 
+>>> class D(B, C):
+...     def __init__(self):
+...         print '>>>D'
+...         B.__init__(self)
+...         print '<<<D'
+... 
+>>> d = D()
+执行结果如下：
+>>>D
+>>>B
+>>>C
+>>>A
+<<<A
+<<<C
+<<<B
+<<<D
+有意思的地方就在于，我在D的构造函数中调用B的构造函数，结果B的构造函数调用了A的构造函数，而B和A根本没有继承关系。
+
+因为D的继承关系排序是这样的D B C A object。C在B的后面，所以super(B)会被误认为包括C。
+Python中关于多继承有mro的东西，关于多继承的顺序有一个C3的算法。有兴趣可以去研究一下。
