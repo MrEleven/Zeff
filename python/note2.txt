@@ -1,0 +1,10 @@
+今天学会了一个有意思的函数apply,
+apply就是以另外一种形式来调用函数
+apply(func, args) 就相当于是func(*args)
+
+今天还学会了用一个函数是一个字符串的方法，
+str.capitalize()，这个方法可以使第一个字母变大写字母，使其他字母变成小写字母。
+str.title() 的分割是以非字母字符来确定是否需要大写，
+而string(module)中有一个方法string.capwords(str)类似雨str.title(),不过capwords是以空白字符为分割标准。
+
+
