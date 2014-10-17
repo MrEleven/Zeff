@@ -7,4 +7,11 @@ str.capitalize()，这个方法可以使第一个字母变大写字母，使其�
 str.title() 的分割是以非字母字符来确定是否需要大写，
 而string(module)中有一个方法string.capwords(str)类似雨str.title(),不过capwords是以空白字符为分割标准。
 
+跟春哥打赌又输了。
+class A(object):
+    name = "eleven"
 
+a = A()
+a.__dict__是不包含name的。
+
+sys.modules中包含所有当前进程中python虚拟机中的包
