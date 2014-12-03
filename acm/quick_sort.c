@@ -4,22 +4,11 @@
 
 void sort(int* array, int len)
 {
-	int xx = 0;
 	if(len == 1 || len == 0)
 	{
 		return;
 	}
-/*	if(len == 2)
-	{
-		if(array[0] > array[1])
-		{
-			int item = array[0];
-			array[0] = array[1];
-			array[1] = item;
-		}
-		return;
-	}
-*/	int i = 0;
+	int i = 0;
 	int j = len-1;
 	int base = array[0];
 	int space = 0;
@@ -69,3 +58,7 @@ int main(void)
 	printf("\n");
 	return 0;
 }
+
+快速排序还是很给力的。我觉得最牛逼的还是这个算法的发明者能够通过一个数组的空间进行排序，如果是我我肯定会开另外一个数组进行排序。
+分治思想还是很牛逼的（不过采用了递归之后性能到底会不会比循环快这个我还没有测试过。）
+排序算法介绍地址： http://developer.51cto.com/art/201403/430986.htm
