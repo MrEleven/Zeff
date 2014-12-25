@@ -22,6 +22,27 @@ AttributeError                            Traceback (most recent call last)
 AttributeError: 'A' object has no attribute 'hobby'
 </pre>
 
+
+
 __all__ 这个包装器可以帮你限制导入的属性。。。
 
+<pre>
+# imptest/eleven.py
+print 'eleven imported'
+
+# imptest/yumi.py
+print 'yumi imported'
+
+# imptest/__init__.py
+__all__ = ['yumi']
+
+# python interpreter
+In [1]: from imptest import *
+yumi imported
+
+</pre>
+
 多看开源项目的代码，果然会有很大收获。
+
+参考:https://docs.python.org/2/tutorial/modules.html
+someting about black magic: http://www.pythontip.com/blog/post/4159/
