@@ -2,6 +2,26 @@
 
 __slots__ 这个包装器可以帮你限定这个类的实例能增加的字段。
 
+<pre>
+In [1]: class A(object):
+   ...:     __slots__ = ("name", "sex", "age")
+      ...:
+
+In [2]: a = A()
+
+In [3]: a.name = "eleven"
+
+In [4]: a.name
+Out[4]: 'eleven'
+
+In [5]: a.hobby = "coding"
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-5-e6842dcc3e76> in <module>()
+----> 1 a.hobby = "coding"
+AttributeError: 'A' object has no attribute 'hobby'
+</pre>
+
 __all__ 这个包装器可以帮你限制导入的属性。。。
 
 多看开源项目的代码，果然会有很大收获。
