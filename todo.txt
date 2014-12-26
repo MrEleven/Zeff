@@ -1,0 +1,18 @@
+一篇关于python黑魔法的文章
+__all__
+__slots__
+__get__
+__set__
+__del__
+__getattribute__
+__getattr__
+__setattr__
+__delattr__
+__init__
+__new__
+
+另外写一些关于属性访问级别的文章
+实例属性，类属性，基类属性等
+__dict__这个到底表示什么
+
+一篇关于setuptools的文章(尤其是entry point和命令行的一些东西)
