@@ -46,6 +46,8 @@ __import__这家伙之前在看tornado源码的时候就已经会用了，这里
 spam = __import__('spam', globals(), locals(), [], -1)
 如果模块不在当前目录下，第四个参数(fromlist)专门用来写要导入的模块。注意：__import__()方法目前我只知道怎么导模块，不知道怎么像from ... import ...这样导入方法或变量。
 
+2015-01-06补充: 今天看到一句话有种一语道破的感觉。__import__('os',globals(),locals(),['path','pip'])  #等价于from os import path, pip
+
 对了，今天还看到了basestring()，这个东西之前在tornado源码中看到过，一直以为是tornado自带的，没想到是python自带的。basestring是unicode和str的基类，不能实例化。但是isinstance(obj, (str, unicode))就可以写撑isinstance(obj, basestring)了。
 
 sorted（）这个方法也比较有意思
