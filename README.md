@@ -1,4 +1,9 @@
 Zeff
 ====
 
-个人笔记。向端端学习，曾经承诺，元旦之前看完python.org上的文档。
+绝对清晰，是风格上唯一的美。
+
+- [ ] Python源码剖析
+- [ ] Computer Systems A Programmer's Perspective Second Edition
+- [ ] Compilers Principles, Techniques and Tools
+- [ ] Computer Organization and Design The Hardware / Software Interface Forth Edition
