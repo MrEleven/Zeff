@@ -22,3 +22,5 @@ __dict__这个到底表示什么
 熟悉pickle/cPickle模块的实现机制。。。
 
 学习mongodb的索引和空间检索功能。
+
+学习Nginx。
