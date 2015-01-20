@@ -26,8 +26,8 @@ class Lexer(object):
         self.line = 1
         self.code = ""
         self.words = {}
-        self.words[Tag.TRUE] = "true"
-        self.words[Tag.FALSE] = "false"
+        self.words[Tag.TRUE] = "True"
+        self.words[Tag.FALSE] = "False"
 
     def set_code(self, code):
         self.code = code
