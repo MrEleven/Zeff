@@ -8,3 +8,4 @@ Zeff
 - [ ] Compilers Principles, Techniques and Tools
 - [ ] Computer Organization and Design The Hardware / Software Interface Forth Edition
 - [ ] Code Complete
+- [ ] Clean Code
