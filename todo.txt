@@ -26,3 +26,5 @@ __dict__这个到底表示什么
 学习Nginx。
 
 Mysql主从复制好像很有意思。嘿嘿
+
+urllib.unquote 和urllib.unquote_plus的区别，顺便了解一下url编码
