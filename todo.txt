@@ -28,3 +28,8 @@ __dict__这个到底表示什么
 Mysql主从复制好像很有意思。嘿嘿
 
 urllib.unquote 和urllib.unquote_plus的区别，顺便了解一下url编码
+
+意识到高速缓存存在的程序员可以利用高速缓存将他们的程序提高一个数量级。到底如何提升呢？ 
+看看这里：http://blog.csdn.net/youxin2012/article/details/17332739，牛逼的程序员都喜欢玩极限。 
+
+(-1) / 7 到底是什么？不是2的幂的除法再CPU中到底是怎么做的。
